@@ -1,22 +1,27 @@
 # base
 snippet base
 	.PHONY: clean, mrproper
-	CC = gcc
+	CC = g++
 	CFLAGS = -g -Wall
 
 	all: $1
 
-	%.o: %.c
+	%.o: %.cpp
 		$(CC) $(CFLAGS) -c -o $@ $<
 	
 	${1:out}: $1.o
 		$(CC) $(CFLAGS) -o $@ $+
+		./$1
 
 	clean:
 		rm -f *.o core.*
+	
+	debug:
+		gdb $1
 
 	mrproper: clean
 		rm -f $1
+
 # add
 snippet add
 	${1:out}: $1.o

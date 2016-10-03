@@ -203,15 +203,15 @@ snippet fcite \footcite[]{}
 	\footcite[${1}]{${2}}${0}
 #Formating text: italic, bold, underline, small capital, emphase ..
 snippet it italic text
-	\textit{${0:${VISUAL:text}}}
+	\textit{${1}} ${0}
 snippet bf bold face text
-	\textbf{${0:${VISUAL:text}}}
+	\textbf{${1}} ${0}
 snippet under underline text
-	\underline{${0:${VISUAL:text}}}
+	\underline{${1}} ${0}
 snippet emp emphasize text
-	\emph{${0:${VISUAL:text}}}
+	\emph{${1}} ${0}
 snippet sc small caps text
-	\textsc{${0:${VISUAL:text}}}
+	\textsc{${1}} ${0}
 #Choosing font
 snippet sf sans serife text
 	\textsf{${0:${VISUAL:text}}}
@@ -259,7 +259,7 @@ snippet sum \sum^{}_{}
 snippet lim \lim_{}
 	\lim_{${1:n \to \infty}} ${0}
 snippet frame frame environment
-	\begin{frame}[${1:t}]{${2:title}}
+	\begin{frame}{${1:title}}
 		${0:${VISUAL}}
 	\end{frame}
 snippet block block environment

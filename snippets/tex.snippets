@@ -232,7 +232,7 @@ snippet ft \footnote
 snippet fig figure environment (includegraphics)
 	\begin{figure}
 	\begin{center}
-		\includegraphics[scale=${1}]{Figures/${2}}
+		\includegraphics[width=${1}\textwidth]{images/${2}}
 	\end{center}
 	\caption{${3}}
 	\label{fig:${4}}
@@ -259,7 +259,7 @@ snippet sum \sum^{}_{}
 snippet lim \lim_{}
 	\lim_{${1:n \to \infty}} ${0}
 snippet frame frame environment
-	\begin{frame}[${1:t}]{${2:title}}
+	\begin{frame}{${1:title}}
 		${0:${VISUAL}}
 	\end{frame}
 snippet block block environment

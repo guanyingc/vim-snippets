@@ -19,7 +19,32 @@ snippet begin \begin{} ... \end{} block
 		${0:${VISUAL}}
 	\end{$1}
 # Tabular
-snippet tab tabular (or arbitrary) environment
+snippet tab table environment 
+	\begin{table}
+		\centering
+		\begin{tabular}{*{${1}}{c}}
+			\toprule
+			${2}
+			\midrule
+			\bottomrule
+		\end{tabular}
+		\caption{}
+		\label{}
+	\end{table}
+	${0}
+snippet tab2 table environment 
+	\begin{table}
+		\centering
+		\begin{tabular}{*{${1}}{c}}
+			\toprule
+			${2}
+			\midrule
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	${0}
+
+snippet tabu tabular (or arbitrary) environment
 	\begin{${1:tabular}}{${2:c}}
 		${0:${VISUAL}}
 	\end{$1}

@@ -11,14 +11,14 @@ snippet sbash
 	IFS=$'\n\t'
 
 snippet if
-	if [[ ${1:condition} ]]; then
+	if [ ${1:condition} ]; then
 		${0:#statements}
 	fi
 snippet elif
-	elif [[ ${1:condition} ]]; then
+	elif [ ${1:condition} ]; then
 		${0:#statements}
 snippet for
-	for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do
+	for ( ${2:i} = 0; $2 < ${1:count}; $2++ ); do
 		${0:#statements}
 	done
 snippet fori
@@ -26,11 +26,11 @@ snippet fori
 		${0:#statements}
 	done
 snippet wh
-	while [[ ${1:condition} ]]; do
+	while [ ${1:condition} ]; do
 		${0:#statements}
 	done
 snippet until
-	until [[ ${1:condition} ]]; do
+	until [ ${1:condition} ]; do
 		${0:#statements}
 	done
 snippet case

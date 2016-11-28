@@ -227,10 +227,12 @@ snippet citey \citeyear
 snippet fcite \footcite[]{}
 	\footcite[${1}]{${2}}${0}
 #Formating text: italic, bold, underline, small capital, emphase ..
+snippet te text
+	\text{${1}}${0}
 snippet it italic text
 	\textit{${1}} ${0}
 snippet bf bold face text
-	\textbf{${1}} ${0}
+	\textbf{${1}}${0}
 snippet under underline text
 	\underline{${1}} ${0}
 snippet emp emphasize text
@@ -348,7 +350,7 @@ snippet urlc
 snippet hrefc
 	\href{`@+`}{${1}} ${0}
 # Beamer
-snippet ifpau
+snippet ifp
 	\ifpause \pause \fi
 snippet pau
 	\pause

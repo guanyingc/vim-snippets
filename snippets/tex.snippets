@@ -199,9 +199,9 @@ snippet ni \noindent
 snippet itd description \item
 	\item[${1:description}] ${0:item}
 snippet figure reference to a figure
-	${1:Figure}~\ref{${2:fig:}}
+	${1:Figure}~\ref{fig:${2}}
 snippet table reference to a table
-	${1:Table}~\ref{${2:tab:}}
+	${1:Table}~\ref{tab:${2}}
 snippet listing reference to a listing
 	${1:Listing}~\ref{${2:list}}
 snippet section reference to a section
@@ -261,19 +261,37 @@ snippet ms mathscr
 snippet ft \footnote
 	\footnote{${0:${VISUAL:text}}}
 snippet fig figure environment (includegraphics)
-	\begin{figure}
-	\begin{center}
+	\begin{figure} \centering
 		\includegraphics[width=${1}\textwidth]{images/${2}}
-	\end{center}
-	\caption{${3}}
-	\label{fig:${4}}
+		\caption{${3}} \label{fig:${4}}
 	\end{figure}
 	${0}
 snippet fig2 figure environment (includegraphics)
-	\begin{figure} \begin{center}
+	\begin{figure} \centering
 		\includegraphics[width=${1}\textwidth]{images/${2}}
-	\end{center} \end{figure}
+	\end{figure}
 	${0}
+snippet subf subfigure environment (includegraphics)
+	\begin{figure}[] \centering
+		\begin{subfigure}[b]{${1}\textwidth} \centering
+			\includegraphics[width=${2}\textwidth]{images/${3}}
+			\caption{${4}} \label{fig:${5}}
+		\end{subfigure}
+
+		\begin{subfigure}[b]{${6}\textwidth} \centering
+			\includegraphics[width=${7}\textwidth]{images/${8}}
+			\caption{${9}} \label{fig:${10}}
+		\end{subfigure}
+		\caption{${11}} \label{fig:${12}}
+	\end{figure}
+	${0}
+snippet subf2 subfigue environment (includegraphics)
+	\begin{subfigure}[b]{${1}\textwidth} \centering
+		\includegraphics[width=${2}\textwidth]{images/${3}}
+		\caption{${4}} \label{fig:${5}}
+	\end{subfigure}
+	${0}
+
 snippet tikz figure environment (tikzpicture)
 	\begin{figure}
 	\begin{center}

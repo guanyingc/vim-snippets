@@ -19,6 +19,8 @@ snippet begin \begin{} ... \end{} block
 		${0:${VISUAL}}
 	\end{$1}
 # Tabular
+snippet box makebox environment
+	\makebox[${1}\textwidth]{${2}} ${0}
 snippet tabfull table environment
 	\begin{table} \centering
 		\resizebox{\textwidth}{!}{

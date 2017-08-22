@@ -19,6 +19,33 @@ snippet begin \begin{} ... \end{} block
 		${0:${VISUAL}}
 	\end{$1}
 # Tabular
+snippet tabfull table environment
+	\begin{table} \centering
+		\resizebox{\textwidth}{!}{
+		\begin{tabular}{*{${1}}{c}}
+			\toprule
+			${2}
+			\midrule
+			\bottomrule
+		\end{tabular}
+		}
+		\caption{}
+		\label{}
+	\end{table}
+	${0}
+snippet tabfull2 table environment
+	\begin{table} \centering
+		\resizebox{\textwidth}{!}{
+		\begin{tabular}{*{${1}}{c}}
+			\toprule
+			${2}
+			\midrule
+			\bottomrule
+		\end{tabular}
+		}
+	\end{table}
+	${0}
+
 snippet tab table environment 
 	\begin{table}
 		\centering
@@ -202,6 +229,8 @@ snippet figure reference to a figure
 	${1:Figure}~\ref{fig:${2}}
 snippet table reference to a table
 	${1:Table}~\ref{tab:${2}}
+snippet subr subreferece
+	(\subref{${1}})
 snippet listing reference to a listing
 	${1:Listing}~\ref{${2:list}}
 snippet section reference to a section

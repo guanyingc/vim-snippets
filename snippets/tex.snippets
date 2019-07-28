@@ -19,6 +19,8 @@ snippet begin \begin{} ... \end{} block
 		${0:${VISUAL}}
 	\end{$1}
 # Tabular
+snippet multicol multicolumn environment
+	\multicolumn{2}{c}{${1}} ${0}
 snippet rotbox rotatebox environment
 	\raisebox{0.2\height}{\rotatebox{90}{${1}}} ${0}
 snippet box makebox environment
@@ -420,6 +422,11 @@ snippet onslide
 	${0}
 snippet only
 	\only<+>{
+		${1}
+	}
+	${0}
+snippet ponly
+	\only<+>{\addtocounter{framenumber}{1} 
 		${1}
 	}
 	${0}

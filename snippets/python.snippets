@@ -24,6 +24,11 @@ snippet embed
 	from IPython import embed; embed() ${0}
 snippet debug
 	import pdb; pdb.set_trace() ${0}
+snippet trace
+	from IPython.core import ultratb  # for debug
+	sys.excepthook = ultratb.FormattedTB(call_pdb=True)
+	${0}
+
 snippet wh
 	while ${1:condition}:
 		${0}

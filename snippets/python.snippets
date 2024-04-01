@@ -247,3 +247,9 @@ snippet kwargs
 	**kwargs${1:,}${0}
 snippet akw
 	*args, **kwargs${1:,}${0}
+
+snippet argparse
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--input', default='', help='')
+	args = parser.parse_args()
+	${0}

@@ -32,6 +32,8 @@ snippet mini minipage environment
 	\end{minipage}
 snippet tabfull table environment
 	\begin{table} \centering
+		\caption{}
+		\label{}
 		\resizebox{\textwidth}{!}{
 		\begin{tabular}{*{${1}}{c}}
 			\toprule
@@ -40,8 +42,6 @@ snippet tabfull table environment
 			\bottomrule
 		\end{tabular}
 		}
-		\caption{}
-		\label{}
 	\end{table}
 	${0}
 snippet tabfull2 table environment
@@ -58,21 +58,19 @@ snippet tabfull2 table environment
 	${0}
 
 snippet tab table environment 
-	\begin{table}
-		\centering
+	\begin{table} \centering
+		\caption{}
+		\label{}
 		\begin{tabular}{*{${1}}{c}}
 			\toprule
 			${2}
 			\midrule
 			\bottomrule
 		\end{tabular}
-		\caption{}
-		\label{}
 	\end{table}
 	${0}
 snippet tab2 table environment 
-	\begin{table}
-		\centering
+	\begin{table} \centering
 		\begin{tabular}{*{${1}}{c}}
 			\toprule
 			${2}
@@ -434,4 +432,13 @@ snippet ponly
 	\only<+>{\addtocounter{framenumber}{1} 
 		${1}
 	}
+	${0}
+snippet mini
+	\begin{minipage}[c]{0.48\linewidth}
+		${1}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{0.48\linewidth}
+		${2}
+	\end{minipage}
 	${0}
